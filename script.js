@@ -1,3 +1,33 @@
+window.addEventListener("scroll", scrollFunction);
+
+function scrollFunction() {
+  const header = document.getElementById("header");
+  if (header !== null) {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      header.classList.add("scrolled");
+    } else {
+      header.classList.remove("scrolled");
+    }
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleBtn = document.querySelector('.toggle_btn');
+  const toggleBtnIcon = document.querySelector('.toggle_btn i');
+  const dropDownMenu = document.querySelector('.dropdown_menu');
+
+  toggleBtn.onclick = function () {
+    dropDownMenu.classList.toggle('open');
+    const isOpen = dropDownMenu.classList.contains('open');
+
+    toggleBtnIcon.className = isOpen
+      ? 'fa-solid fa-xmark'
+      : 'fa-solid fa-bars';
+  };
+});
+
+
+
 const trailer = document.getElementById("trailer");
 
 const animateTrailer = (e, interacting) => {

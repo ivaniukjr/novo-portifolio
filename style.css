@@ -26,7 +26,7 @@ body {
   font-family: 'Exo', sans-serif;
 }
 
-header{
+/* header{
     display: flex;
     flex-direction: row;
     padding: 15px 0;
@@ -50,6 +50,143 @@ header{
         }
      }
     }
+} */
+
+header{
+  padding: 0 2rem;
+  height: 6em;
+  display: flex;
+  font-family: 'Exo';
+
+  .navbar{
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+
+  }
+
+  .navbar .links{
+      display: flex;
+      gap: 2rem;
+      @media only screen and (max-width:992px){
+          display: none;
+      }
+  }
+
+  .navbar .toggle_btn{
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: none;
+
+      @media only screen and (max-width:992px){
+          display: block;
+      }
+  }
+
+  .action_btn{
+      background-color: #b700ff;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border: none;
+      outline: none;
+      margin-right: 1%;
+      width: 8rem;
+      display: flex;
+      justify-content: center;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: scale 0.2s ease;
+      @media only screen and (max-width:992px){
+          display: none;
+      }
+  }
+
+  .action_btn:hover{
+      scale: 1.05;
+      color: #fff;
+
+  }
+
+  .action_btn:active{
+      scale: 0.95;
+  }
+
+  .dropdown_menu{
+      display: none;
+      position: absolute;
+      right: 2rem;
+      top: 60px;
+      height: 0;
+      width: 300px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+      @media only screen and (max-width:992px){
+          display: block;
+      }
+
+      @media only screen and (max-width:576px){
+          left: 2rem;
+          width: unset;
+      }
+
+  }
+
+  .dropdown_menu.open{
+      height: 240px;
+  }
+
+  .dropdown_menu li {
+      padding: 0.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'roboto';
+
+      .action_btn{
+          display: flex !important;
+          width: 100%;
+          justify-content: center;
+      }
+  }
+
+  .logo{
+      width: 13%;
+      img{
+          width: 100%;
+      }
+
+      @media only screen and (max-width:992px){
+          width: 9rem;
+          margin-left: 3%;
+      }
+  }
+
+  li{
+      list-style: none;
+  }
+  
+  a{
+      text-decoration: none;
+      color: #121212;
+      font-size: 1.1rem;
+      transition: .4s;
+ 
+  }
+
+  a:hover{
+      color: #8e44ad;
+  }
 }
 
 .description {
@@ -383,7 +520,7 @@ header{
     position: absolute; 
     z-index: -1; 
     width: 100%;
-    height: 100vh;
+    height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -621,3 +758,235 @@ header{
         }
     
     }
+
+    .about-container{
+      display: flex;
+    flex-direction: column-reverse;
+    width: 32%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+  
+      @media only screen and (max-width:768px){
+          padding: 7rem 3rem;
+      }
+  
+      .about-content{
+          display: flex;
+          flex-direction: column;
+          padding: 2% 4% 2% 8%;
+          align-items: flex-start;
+          justify-content: center;
+          color: #fff;
+          width: 55%;
+  
+          h1{
+              font-size: 2rem;
+  
+              strong{
+                  color: aqua;
+                  transition: .5s;
+              }
+              strong:hover{
+                  opacity: .4;
+              }
+          }
+  
+          span{
+              font-size: 1.2rem;
+              margin-bottom: 1%;
+  
+              strong{
+                  color: aqua;
+                  font-weight: bold;
+              }
+  
+              em{
+                  color: #ff9100;
+              }
+          }
+  
+          .span-description{
+              opacity: .5;
+              transition: .5s;
+          }
+  
+          .span-description:hover{
+              opacity: 1;
+          }
+  
+          .content{
+              content: '';
+              height: 3px;
+              width: 15rem;
+              background-color: aqua;
+              margin: 1rem 0;
+          }
+          .find-me{
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: space-between;
+              margin-top: .5rem;
+              padding: .5rem 0;
+  
+  
+              @media only screen and (max-width:630px ){
+                  flex-direction: column;
+  
+                  align-items: flex-start;
+              }
+
+              .find-me-align{
+                display: flex;
+                margin-bottom: 3%;
+              }
+  
+              .find-me-span{
+                  width: 8rem;
+              }
+  
+              .social-media{
+                  display: flex;
+                  flex-direction: row;
+  
+                  @media only screen and (max-width:630px){
+                      margin: .5rem 0;
+                  } 
+              }
+  
+              span{
+                  margin-right: .4rem;
+                  font-size: 1rem;
+  
+              }
+              img{
+                  width: 1.4rem;
+                  margin-right: .6rem;
+                  transition: .5s;
+              }
+  
+              img:hover{
+                  opacity: .6;
+              }
+              .linkedin{
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  justify-content: center;
+                  padding: 0.3rem 0.7rem 0.3rem 0.7rem;
+                  background-color: #006eff;
+                  text-decoration: none;
+                  color: #fff;
+                  border-radius: 20px;
+                  width: 7rem;
+                  transition: .5s ease;
+  
+                  @media only screen and (max-width: 630px){
+                      width: 10rem;
+                  }
+              }
+  
+              .linkedin:hover{
+                  width: 10rem;
+  
+              }
+          }
+  
+      }
+  
+      .about-logo{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 77%;
+  
+          @media only screen and (max-width: 992px){
+              display: none !important;
+          }
+  
+          img{
+              width: 40%;
+              opacity: .6;
+              z-index: 0;
+              transition: .5s;
+          }
+  
+          img:hover{
+              opacity: 1;
+          }
+      }
+  }
+
+  .works{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 40em;
+    background-color: #212121;
+  }
+
+  .projects{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 30em;
+    background-color: #151515;
+  }
+
+  .certificados{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 20em;
+    filter: drop-shadow(8px 8px 10px rgb(53, 53, 53));
+    background: url(assets/img/alura-background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+
+    .certificados-container{
+
+      display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+      h4{
+        font-size: 30px;
+        margin-bottom: 10%;
+      }
+      
+      .alura{
+        display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  justify-content: center;
+                  padding: 0.8rem 0.7rem 0.8rem 0.7rem;
+                  background-color: transparent;
+                  border: 1px solid #006eff;
+                  text-decoration: none;
+                  color: #fff;
+                  font-size: 20px;
+                  border-radius: 30px;
+                  width: 14rem;
+                  transition: .5s ease;
+
+                  
+      }
+
+      .alura:hover{
+        width: 18rem;
+        border: 1px solid #f1f1f1;
+        background-color: #006eff7a;
+      }
+    }
+  }
