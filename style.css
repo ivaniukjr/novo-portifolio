@@ -564,7 +564,7 @@ header{
     }
 
     @media only screen and (max-width: 480px) { 
-      height: 300vh;
+      height: 350vh;
     }
   }
   
@@ -593,7 +593,7 @@ header{
     }
 
     @media only screen and (max-width: 480px) { 
-      height: 300vh;
+      height: 350vh;
     }
   }
   
@@ -664,7 +664,7 @@ header{
     }
 
     @media only screen and (max-width: 480px) { 
-      height: 290vh;
+      height: 330vh;
     }
   }
   
