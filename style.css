@@ -544,11 +544,11 @@ header{
 .competencias {
     z-index: 1; 
     display: flex;
-    height: 60vh;
+    height: auto;
     flex-wrap: wrap;
     filter: drop-shadow(8px 8px 10px rgb(54, 54, 54));
 
-    @media only screen and (max-width: 1420px){
+    /* @media only screen and (max-width: 1420px){
       height: 75vh;
     }
 
@@ -563,7 +563,7 @@ header{
       height: 146vh;
     }
 
-    /* @media only screen and (max-width: 480px) { 
+    @media only screen and (max-width: 480px) { 
       height: 350vh;
     } */
   }
@@ -572,7 +572,7 @@ header{
     position: absolute; 
     z-index: -1; 
     width: 100%;
-    height: 60vh;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -580,7 +580,7 @@ header{
     background-image: linear-gradient(-45deg, rgb(9, 0, 133) 0%, rgb(255, 0, 200) 20%, rgb(0, 89, 255) 40%, #ff357f 70%, rgb(7, 62, 241) 100%);
     animation: AnimateBG 20s ease infinite;
 
-    @media only screen and (max-width: 1420px){
+    /* @media only screen and (max-width: 1420px){
       height: 75vh;
     }
 
@@ -592,7 +592,7 @@ header{
       height: 146vh;
     }
 
-    /* @media only screen and (max-width: 480px) { 
+    @media only screen and (max-width: 480px) { 
       height: 350vh;
     } */
   }
@@ -625,6 +625,7 @@ header{
   .container-competencias {
     position: relative; 
     z-index: 2;
+    padding: 3em 0;
     flex: 1;
     display: flex;
     text-align: center;
@@ -636,12 +637,12 @@ header{
   }
   
   .competenciasContent {
-    height: 45vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1em 0;
+    padding: 2em 0;
     z-index: 2; 
     width: 80%;
     background: rgba(255, 255, 255, 0.137);
@@ -650,7 +651,7 @@ header{
     backdrop-filter: blur(2.5px);
     -webkit-backdrop-filter: blur(1.5px);
     border: 1px solid rgba(255, 255, 255, 0.38);
-
+/* 
     @media only screen and (max-width: 1420px){
       height: 68vh;
     }
@@ -663,7 +664,7 @@ header{
       height: 139vh;
     }
 
-    /* @media only screen and (max-width: 480px) { 
+    @media only screen and (max-width: 480px) { 
       height: 330vh;
     } */
   }
@@ -700,11 +701,11 @@ header{
     }
   }
   
-  /* @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 480px) {
     .grid-competencias {
       grid-template-columns: repeat(1, 1fr);
     }
-  } */
+  }
   
   .image-competencias {
     position: relative;
