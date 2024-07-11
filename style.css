@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #121212;
+}
+
 ::-webkit-scrollbar{
     background-color: aqua;
     width: .5em;
@@ -33,6 +37,7 @@ header{
   height: 6em;
   display: flex;
   justify-content: center;
+  background-color: #f7f7f7;
   align-items: center;
   font-family: 'Exo';
 
@@ -162,7 +167,7 @@ header{
   }
 
   @media only screen and (max-width: 768px){
-    margin-left: 35%;
+    margin: 0 0 0 15%;
   }
 }
 
