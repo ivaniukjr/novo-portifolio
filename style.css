@@ -199,6 +199,13 @@ header{
   background-color: #202020;
   overflow: hidden;
   color: #ffffff;
+
+  @media only screen and (max-width: 857px){
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
 }
 
 .area {
@@ -214,23 +221,33 @@ header{
 }
 
 .descContainer {
-    width: 80em;
+    width: 80%;
     position: relative;
     z-index: 100;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    padding-right: 20px;
+    padding: 0 20px;
     overflow: hidden; 
+
+    @media only screen and(max-width:1190px){
+      width: 63%;
+    }
+
+    @media only screen and (max-width: 857px){
+      height: 65vh;
+      width: 100%;
+    }
+
   }
   
   .descContainer::after {
     content: '';
     position: absolute;
     top: 0;
-    right: -55px;
-    width: 84px;
+    right: -67px;
+    width: 100px;
     height: 100%; 
     background-color: #202020; 
     transform-origin: top left;
@@ -246,7 +263,11 @@ header{
   font-size: 53px;
   font-family: 'Lato', sans-serif;
   font-weight: 600;
-  margin-top: 10px;
+  margin-top: -7px;
+
+  @media only screen and (max-width: 857px){
+    font-size: 43px;
+  }
 }
 
 .rotating-text {
@@ -255,6 +276,11 @@ header{
   font-size: 40px;
   color: white;
   margin-top: 10px;
+
+  @media only screen and (max-width: 857px){
+    font-size: 25px;
+  }
+
 }
 
 .rotating-text p {
@@ -263,10 +289,16 @@ header{
   align-items: center;
   justify-content: flex-start;
   margin: 0;
+  @media only screen and (max-width: 857px){
+    font-size: 25px;
+  }
 }
 
 .rotating-text p span {
   font-size: 50px;
+  @media only screen and (max-width: 857px){
+    font-size: 25px;
+  }
 }
 
 .word {
@@ -515,6 +547,15 @@ header{
     height: 60vh;
     flex-wrap: wrap;
     filter: drop-shadow(8px 8px 10px rgb(54, 54, 54));
+
+    
+    @media only screen and (max-width: 752px) { 
+      height: 84vh;
+    }
+
+    @media only screen and (max-width: 480px) { 
+      height: 155vh;
+    }
   }
   
   .bg {
@@ -526,8 +567,16 @@ header{
     align-items: center;
     justify-content: center;
     background-size: 300% 300%;
-    background-image: linear-gradient(-45deg, rgb(241, 241, 7) 0%, rgb(255, 0, 200) 20%, rgb(0, 89, 255) 40%, #ff357f 70%, rgb(241, 241, 7) 100%);
+    background-image: linear-gradient(-45deg, rgb(9, 0, 133) 0%, rgb(255, 0, 200) 20%, rgb(0, 89, 255) 40%, #ff357f 70%, rgb(7, 62, 241) 100%);
     animation: AnimateBG 20s ease infinite;
+
+    @media only screen and (max-width: 752px) { 
+      height: 84vh;
+    }
+
+    @media only screen and (max-width: 480px) { 
+      height: 155vh;
+    }
   }
   
   @keyframes AnimateBG {
@@ -569,14 +618,36 @@ header{
   }
   
   .competenciasContent {
-    z-index: 2; /* Z-index para ficar acima do .bg */
-    width: 60%;
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 0;
+    z-index: 2; 
+    width: 80%;
     background: rgba(255, 255, 255, 0.137);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(2.5px);
     -webkit-backdrop-filter: blur(1.5px);
     border: 1px solid rgba(255, 255, 255, 0.38);
+
+    @media only screen and (max-width: 1420px){
+      height: 39vh;
+    }
+
+    @media only screen and (max-width: 952px){
+      height: 52vh;
+    }
+
+    @media only screen and (max-width: 752px) {
+      height: 77vh;
+    }
+
+    @media only screen and (max-width: 480px) { 
+      height: 147vh;
+    }
   }
   
   .grid-competencias {
@@ -587,31 +658,31 @@ header{
     gap: 2.8em;
   }
   
-  @media only screen and (max-width: 1170px) {
+  @media only screen and (max-width: 1420px) {
     .grid-competencias {
       grid-template-columns: repeat(5, 1fr);
     }
   }
   
-  @media only screen and (max-width: 985px) {
+  @media only screen and (max-width: 1152px) {
     .grid-competencias {
       grid-template-columns: repeat(4, 1fr);
     }
   }
   
-  @media only screen and (max-width: 850px) {
+  @media only screen and (max-width: 952px) {
     .grid-competencias {
       grid-template-columns: repeat(3, 1fr);
     }
   }
   
-  @media only screen and (max-width: 640px) {
+  @media only screen and (max-width: 752px) {
     .grid-competencias {
       grid-template-columns: repeat(2, 1fr);
     }
   }
   
-  @media only screen and (max-width: 390px) {
+  @media only screen and (max-width: 480px) {
     .grid-competencias {
       grid-template-columns: repeat(1, 1fr);
     }
@@ -770,7 +841,8 @@ header{
     height: auto;
     align-items: center;
     justify-content: center;
-  
+
+
       @media only screen and (max-width:768px){
           padding: 7rem 3rem;
       }
@@ -778,11 +850,20 @@ header{
       .about-content{
           display: flex;
           flex-direction: column;
-          padding: 2% 4% 2% 8%;
+          padding: 2% 4% 2% 4%;
           align-items: flex-start;
           justify-content: center;
           color: #fff;
           width: 55%;
+
+          @media only screen and (max-width:1310px){
+            width: 77%;
+        }
+
+         @media only screen and (max-width:1004px){
+          width: 11rem;
+       }
+      
   
           h1{
               font-size: 2rem;
@@ -825,6 +906,14 @@ header{
               width: 15rem;
               background-color: aqua;
               margin: 1rem 0;
+
+              @media only screen and (max-width:1004px){
+                width: 10em;
+             }
+
+              @media only screen and (max-width:992px){
+                display: none;
+             }
           }
           .find-me{
               display: flex;
@@ -833,6 +922,10 @@ header{
               justify-content: space-between;
               margin-top: .5rem;
               padding: .5rem 0;
+
+              @media only screen and (max-width:1004px){
+                width: 90%;
+             }
   
   
               @media only screen and (max-width:630px ){
@@ -844,6 +937,7 @@ header{
               .find-me-align{
                 display: flex;
                 margin-bottom: 3%;
+                align-items: center;
               }
   
               .find-me-span{
@@ -905,7 +999,8 @@ header{
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 77%;
+          width: 17em;
+
   
           @media only screen and (max-width: 992px){
               display: none !important;
@@ -1298,6 +1393,7 @@ header{
     justify-content: center;
     width: 100%;
     height: 20em;
+    padding: 0 1em;
     filter: drop-shadow(8px 8px 10px rgb(53, 53, 53));
     background: url(assets/img/alura-background.jpg);
     background-position: center;
