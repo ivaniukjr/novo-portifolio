@@ -563,9 +563,9 @@ header{
       height: 146vh;
     }
 
-    @media only screen and (max-width: 480px) { 
+    /* @media only screen and (max-width: 480px) { 
       height: 350vh;
-    }
+    } */
   }
   
   .bg {
@@ -592,9 +592,9 @@ header{
       height: 146vh;
     }
 
-    @media only screen and (max-width: 480px) { 
+    /* @media only screen and (max-width: 480px) { 
       height: 350vh;
-    }
+    } */
   }
   
   @keyframes AnimateBG {
@@ -663,9 +663,9 @@ header{
       height: 139vh;
     }
 
-    @media only screen and (max-width: 480px) { 
+    /* @media only screen and (max-width: 480px) { 
       height: 330vh;
-    }
+    } */
   }
   
   .grid-competencias {
@@ -700,11 +700,11 @@ header{
     }
   }
   
-  @media only screen and (max-width: 480px) {
+  /* @media only screen and (max-width: 480px) {
     .grid-competencias {
       grid-template-columns: repeat(1, 1fr);
     }
-  }
+  } */
   
   .image-competencias {
     position: relative;
