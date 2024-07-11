@@ -160,6 +160,10 @@ header{
   @media only screen and (max-width: 1004px){
     margin-left: 43%;
   }
+
+  @media only screen and (max-width: 768px){
+    margin-left: 35%;
+  }
 }
 
 .rotating-text {
