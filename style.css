@@ -145,6 +145,23 @@ header{
   }
 }
 
+.about-align{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  margin: 0 10% 0 38%;
+
+  @media only screen and (max-width:1200px){
+    margin: 0 10% 0 19%;
+  }
+
+  @media only screen and (max-width: 1004px){
+    margin-left: 43%;
+  }
+}
+
 .rotating-text {
   font-family: 'Lato', sans-serif;
   font-weight: 600;
@@ -728,7 +745,7 @@ header{
           align-items: flex-start;
           justify-content: center;
           color: #fff;
-          width: 55%;
+          width: 44%;
 
           @media only screen and (max-width:1310px){
             width: 77%;
@@ -789,7 +806,7 @@ header{
                 width: 10em;
              }
 
-              @media only screen and (max-width:992px){
+              @media only screen and (max-width:1200px){
                 display: none;
              }
           }
@@ -884,7 +901,7 @@ header{
           width: 17em;
 
   
-          @media only screen and (max-width: 992px){
+          @media only screen and (max-width: 1200px){
               display: none !important;
           }
   
