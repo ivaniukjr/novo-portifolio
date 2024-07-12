@@ -176,6 +176,7 @@ header{
   align-items: center;
   justify-content: center;
   position: relative;
+  overflow: auto;
   text-align: center;
 
   .modal-align{
