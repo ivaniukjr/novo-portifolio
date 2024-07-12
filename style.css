@@ -71,7 +71,6 @@ header{
 
 .description {
   position: relative;
-  cursor: pointer;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -184,6 +183,11 @@ header{
     flex-direction: column;
     text-align: start;
   }
+
+    em{
+      font-size: 13px;
+      color: #464646;
+    }
 
   h2{
     font-size: 1em;
