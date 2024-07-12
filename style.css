@@ -166,20 +166,38 @@ header{
 }
 
 .modal-content {
-  background-color: #fefefe;
+  background: linear-gradient(to bottom right, #f8f8f8, #9fc9da);
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
+  border-radius: 10px;
+  color: #121212;
   width: 80%;
-  height: 80%;
+  height: auto;
   align-items: center;
   justify-content: center;
   position: relative;
   text-align: center;
+
+  .modal-align{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+  }
+
+  h2{
+    font-size: 1em;
+    margin: 1em 0 1.5em 0;
+    color: #7d4b4b;
+  }
+
+  span{
+    margin-bottom: 1em;
+  }
 }
 
 .close {
-  color: #aaa;
+  color: #868686;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -1021,16 +1039,14 @@ header{
       padding: 1em;
       flex-direction: column;
       height: 18em;
-      background-color: #ffffff1e;
+      transition: 1s;
+      background: linear-gradient(to bottom left, #d3d3d3, #888888);
       align-items: center;
       justify-content: center;
-      border: 2px solid #fff;
-      transition: 1s;
+      border: 3px solid #fff;
       border-radius: 15px;
       margin: 3em 0 1em 0;
-
-
-
+      cursor: pointer;
 
       img{
         width: 17em;
@@ -1039,8 +1055,7 @@ header{
 
     
     .experiencesContent:hover{
-      background-color: transparent;
-      border: 2px solid #8e44ad;
+      border: 3px solid #d32fb8;
     }
 
     .links{

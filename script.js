@@ -95,7 +95,7 @@ setInterval(rotateText, 4000);
 
 document.addEventListener("DOMContentLoaded", function() {
   var modais = document.querySelectorAll(".modal");
-  var imgs = document.querySelectorAll(".experiencesContent img");
+  var imgs = document.querySelectorAll(".experiencesContent");
 
   imgs.forEach(function(img, index) {
     img.onclick = function() {
