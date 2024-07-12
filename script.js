@@ -93,3 +93,29 @@ rotateText();
 setInterval(rotateText, 4000);
 
 
+document.addEventListener("DOMContentLoaded", function() {
+  var modais = document.querySelectorAll(".modal");
+  var imgs = document.querySelectorAll(".experiencesContent img");
+
+  imgs.forEach(function(img, index) {
+    img.onclick = function() {
+      modais[index].style.display = "flex";
+    }
+  });
+
+  var fechar = document.querySelectorAll(".close");
+
+  fechar.forEach(function(botao, index) {
+    botao.onclick = function() {
+      modais[index].style.display = "none";
+    }
+  });
+
+  window.onclick = function(event) {
+    modais.forEach(function(modal) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    });
+  }
+});
