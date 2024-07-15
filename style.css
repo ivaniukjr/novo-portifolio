@@ -1372,6 +1372,10 @@ header{
       h4{
         font-size: 30px;
         margin-bottom: 10%;
+
+        @media only screen and (max-width: 478px){
+          font-size: 22px;
+        }
       }
       
       .alura{
